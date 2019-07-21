@@ -7,17 +7,10 @@ app.get('/', function(req,res){
 })
 
 app.get('/userform', function(req,res){
-  const response ={
+  const response = {
     first_name: req.query.first_name,
     last_name: req.query.last_name
-  };
-});
-
-var server = app.listen(3000,'localhost', function(){
-    var host =server.address().address;
-    var port=server.address().port;
-
-    console.log('Przykøadowa aplikacja nasøuchuje na http://' + host + ':' + port);
+  }
 })
 
-app.use(express.static('assets'));
+var server = app.listen(3000);
