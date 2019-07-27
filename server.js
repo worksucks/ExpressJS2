@@ -10,7 +10,8 @@ app.get('/userform', function(req,res){
   const response = {
     first_name: req.query.first_name,
     last_name: req.query.last_name
-  }
-})
+  };
+  res.json(response);
+});
 
 var server = app.listen(3000);
